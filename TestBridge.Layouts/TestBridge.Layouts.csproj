@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <NoStdLib>true</NoStdLib>
+    <AddAdditionalExplicitAssemblyReferences>false</AddAdditionalExplicitAssemblyReferences>
+    <AdditionalExplicitAssemblyReferences />
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AE90AB3C-A868-42E8-A86A-1FC2B4F00D3E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TestBridge.Layouts</RootNamespace>
+    <AssemblyName>TestBridge.Layouts</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Bridge, Version=1.12.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bridge.1.12.1\lib\net40\Bridge.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Bridge.Html5, Version=1.12.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bridge.1.12.1\lib\net40\Bridge.Html5.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Bridge\output\readme.txt" />
+    <Content Include="Bridge\www\demo.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Readme\Bridge.NET\LICENSE" />
+    <None Include="App_Readme\Bridge.NET\README.md" />
+    <None Include="Bridge\bridge.json" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bridge.Layouts\Bridge.Layouts.csproj">
+      <Project>{ede7989c-a866-42a4-bfe9-db291b487b6f}</Project>
+      <Name>Bridge.Layouts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Bridge\output\layouts\Application.ts" />
+    <TypeScriptCompile Include="Bridge\output\layouts\Command.ts" />
+    <TypeScriptCompile Include="Bridge\output\layouts\Consts.ts" />
+    <TypeScriptCompile Include="Bridge\output\layouts\controls\Border.ts" />
+    <TypeScriptCompile Include="Bridge\output\layouts\controls\Button.ts" />
+    <TypeScriptCompile Include="Bridge\output\layouts\controls\Canvas.ts" />
+    <TypeScriptCompile Include="Bridge\output\layouts\controls\ComboBox.ts" />
+    <TypeScriptCompile Include="Bridge\output\layouts\controls\ContentTemplate.ts" />
+    <TypeScriptCompile Include="Bridge\output\layouts\controls\ControlTemplate.ts" />
+    <TypeScriptCompile Include="Bridge\output\layouts\controls\ControlTemplateSelector.ts" />
+    <TypeScriptCompile Include="Bridge\output\layouts\controls\DataTemplate.ts" />
+    <TypeScriptCompile Include="Bridge\output\layouts\controls\Frame.ts" />
+    <TypeScriptCompile Include="Bridge\output\layouts\controls\Grid.ts" />
+    <TypeScriptCompile Include="Bridge\output\layouts\controls\GridSplitter.ts" />
+    <TypeScriptCompile Include="Bridge\output\layouts\controls\Image.ts" />
+    <TypeScriptCompile Include="Bridge\output\layouts\controls\ItemsControl.ts" />
+    <TypeScriptCompile Include="Bridge\output\layouts\controls\MediaTemplateSelector.ts" />
+    <TypeScriptCompile Include="Bridge\output\layouts\controls\NativeElements.ts" />
+    <TypeScriptCompile Include="Bridge\output\layouts\controls\Page.ts" />
+    <TypeScriptCompile Include="Bridge\output\layouts\controls\Panel.ts" />
+    <TypeScriptCompile Include="Bridge\output\layouts\controls\Popup.ts" />
+    <TypeScriptCompile Include="Bridge\output\layouts\controls\Stack.ts" />
+    <TypeScriptCompile Include="Bridge\output\layouts\controls\TextBlock.ts" />
+    <TypeScriptCompile Include="Bridge\output\layouts\controls\TextBox.ts" />
+    <TypeScriptCompile Include="Bridge\output\layouts\controls\UserControl.ts" />
+    <TypeScriptCompile Include="Bridge\output\layouts\DepObject.ts" />
+    <TypeScriptCompile Include="Bridge\output\layouts\DepProperty.ts" />
+    <TypeScriptCompile Include="Bridge\output\layouts\EventAction.ts" />
+    <TypeScriptCompile Include="Bridge\output\layouts\Extensions.ts" />
+    <TypeScriptCompile Include="Bridge\output\layouts\FrameworkElement.ts" />
+    <TypeScriptCompile Include="Bridge\output\layouts\IComparer.ts" />
+    <TypeScriptCompile Include="Bridge\output\layouts\IConverter.ts" />
+    <TypeScriptCompile Include="Bridge\output\layouts\INotifyCollectionChanged.ts" />
+    <TypeScriptCompile Include="Bridge\output\layouts\ISupport.ts" />
+    <TypeScriptCompile Include="Bridge\output\layouts\LayoutManager.ts" />
+    <TypeScriptCompile Include="Bridge\output\layouts\linq.d.ts" />
+    <TypeScriptCompile Include="Bridge\output\layouts\ObservableCollection.ts" />
+    <TypeScriptCompile Include="Bridge\output\layouts\PropertyMap.ts" />
+    <TypeScriptCompile Include="Bridge\output\layouts\Timer.ts" />
+    <TypeScriptCompile Include="Bridge\output\layouts\UIElement.ts" />
+    <TypeScriptCompile Include="Bridge\output\layouts\XamlReader.ts" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Bridge.1.12.1\build\Bridge.targets" Condition="Exists('..\packages\Bridge.1.12.1\build\Bridge.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Bridge.1.12.1\build\Bridge.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Bridge.1.12.1\build\Bridge.targets'))" />
+  </Target>
+</Project>
