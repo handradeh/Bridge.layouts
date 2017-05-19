@@ -1,6 +1,6 @@
 ﻿namespace Bridge.Layouts
 {
-    [Ignore]
+    [External]
     [Namespace("layouts")]
     public interface ISupportCollectionChanged
     {

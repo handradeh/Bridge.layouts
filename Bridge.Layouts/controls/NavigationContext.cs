@@ -1,7 +1,7 @@
 ﻿using Bridge;
 using Bridge.Layouts.Controls;
 
-[Ignore]
+[External]
 [Namespace("layouts.controls")]
 public class NavigationContext
 {

@@ -92,8 +92,7 @@
         },
         getloginCommand: function () {
             if (this._loginCommand == null) {
-                this._loginCommand = new layouts.Command(Bridge.fn.bind(this, $_.Bridge.Layouts.Sample5.LoginViewModel.f2),
-                                                        Bridge.fn.bind(this, $_.Bridge.Layouts.Sample5.LoginViewModel.f3));
+                this._loginCommand = new layouts.Command(Bridge.fn.bind(this, $_.Bridge.Layouts.Sample5.LoginViewModel.f2), Bridge.fn.bind(this, $_.Bridge.Layouts.Sample5.LoginViewModel.f3));
             }
             return this._loginCommand;
         },

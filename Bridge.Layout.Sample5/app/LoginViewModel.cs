@@ -54,7 +54,7 @@ namespace Bridge.Layouts.Sample5
             }
         }
      
-        private bool userLogged;
+        public  bool userLogged;
         private Login view;
 
         public Command loginCommand 

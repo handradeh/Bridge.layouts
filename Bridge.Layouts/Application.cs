@@ -4,7 +4,7 @@ using System;
 
 namespace Bridge.Layouts
 {
-    [Ignore]
+    [External]
     [Namespace("layouts")]
     public class XamlReader
     {
@@ -48,7 +48,7 @@ namespace Bridge.Layouts
         //private static tryCallMethod(obj, methodName, value);
         //private static tryParseBinding(value);
     }
-    [Ignore]
+    [External]
     [Namespace("layouts")]
     public class Application
     {
@@ -120,7 +120,7 @@ namespace Bridge.Layouts
         } 
     }
 
-    [Ignore]
+    [External]
     [Namespace("layouts")]
     public class InstanceLoader
    {
