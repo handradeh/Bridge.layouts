@@ -74,6 +74,7 @@ namespace Bridge.Layouts.Sample5
             this._password == "test")
         {
             userLogged = true;
+            Global.Set("userLogged", true);
             Application.current.navigate("/page1/" + this._username);
         }
         else

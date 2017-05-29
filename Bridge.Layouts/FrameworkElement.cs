@@ -38,7 +38,7 @@
         //    margin: Thickness;
         //    static dataContextProperty: DepProperty;
         public object dataContext; //: any;
-    //    parentDataContext: any;
+        public object parentDataContext; //: any;
     //    protected onDependencyPropertyChanged(property: DepProperty, value: any, oldValue: any): void;
     //    protected onParentChanged(oldParent: DepObject, newParent: DepObject): void;
     //    static tagProperty: DepProperty;

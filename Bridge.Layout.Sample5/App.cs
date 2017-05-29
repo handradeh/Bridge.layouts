@@ -11,22 +11,19 @@ namespace Bridge.Layouts.Sample5
             Global.Alert("Success");
 
             //easiest way to save user logged-in state
-            bool userLogged = false;
+            //bool userLogged = false;
 
-          
-       
+            Global.Set("userLogged", false);          
+
+
             var app =new  Application();
             app.map("/login", "Bridge.Layouts.Sample5/Login");//mapping is case sensitive
             app.map("/page1/{user}", "Bridge.Layouts.Sample5/Page1");
             app.map("/page2/{parameter}", "app/Page2");
 
             app.onBeforeNavigate += (ctx) => {
-                if (ctx.nextUri != "/login" && !userLogged)
-                {
-                    if (app.page != null) {
-                        LoginViewModel loginmodel = (LoginViewModel)app.page.dataContext;
-                        userLogged = loginmodel.userLogged;
-                    }   
+                if (ctx.nextUri != "/login" && !Global.Get<bool>("userLogged"))
+                {                   
                     ctx.cancel = true;
                     //user must be logged in before go ahead
                     app.navigate("/login");
